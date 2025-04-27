@@ -8,21 +8,22 @@
 
 <script setup>
 const props = defineProps({
-    modelValue: { // Use modelValue for v-model compatibility if needed later
+    modelValue: { 
         type: Number,
         default: 0
     }
 });
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:quantity']);
 
 function increment() {
-    emit('update:modelValue', props.modelValue + 1);
+    emit('update:quantity', props.modelValue + 1);
+     
 }
 
 function decrement() {
     if (props.modelValue > 0) {
-        emit('update:modelValue', props.modelValue - 1);
+        emit('update:quantity', props.modelValue - 1);
     }
 }
 </script>

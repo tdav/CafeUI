@@ -15,7 +15,8 @@
     <h2 class="mt-4 mb-3 fs-5 fw-bold">Lunch Menu</h2>
     <div class="row g-3">
       <div v-for="item in menuItems" :key="item.id" class="col-xl-4 col-lg-6 col-md-6">
-        <MenuItemCard :item="item" @update-quantity="handleUpdateQuantity" />
+        <MenuItemCard :item="item" @update-quantity="emit('updateItemQuantity', $event)"/>
+                
       </div>
     </div>
   </div>
@@ -33,7 +34,8 @@ defineProps({
   }
 });
 
-const emit = defineEmits(['updateItemQuantity']); // Example emit
+const emit = defineEmits(['updateItemQuantity']); 
+  
 
 // --- Sample Data ---
 const categories = ref([
