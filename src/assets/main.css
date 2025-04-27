@@ -1,0 +1,40 @@
+/* src/assets/main.css */
+:root {
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+  /* Add any other global overrides */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f8f9fa; /* Match overall bg */
+}
+
+/* Scrollbar styling */
+.overflow-auto::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 3px;
+}
+.overflow-auto::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Specific overrides if needed */
+.btn-primary {
+   --bs-btn-color: #fff;
+   --bs-btn-bg: var(--bs-primary);
+   --bs-btn-border-color: var(--bs-primary);
+   --bs-btn-hover-color: #fff;
+   --bs-btn-hover-bg: #0b5ed7;
+   --bs-btn-hover-border-color: #0a58ca;
+   --bs-btn-active-color: #fff;
+   --bs-btn-active-bg: #0a58ca;
+   --bs-btn-active-border-color: #0a53be;
+}
+
+/* Add other global styles or overrides here */
